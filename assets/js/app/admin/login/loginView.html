@@ -1,0 +1,23 @@
+<div ng-controller="loginController">
+  <loading flag="loading" class="center-in-page"/>
+  <div class="row row-centered margin-top-50 margin-left-10 margin-right-10" ng-hide="loading">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <hr/>
+      <form class="form-signin" role="form" ng-submit="login(user)">
+        <h2>Please Log In</h2>
+        <div class="form-group margin-top-20">
+          <input type="text" class="form-control" placeholder="Username" required="" autofocus="" ng-model="user.username">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" required="" ng-model="user.password">
+        </div>
+        <div class="text-right">
+          <button class="btn btn-success" type="submit">Sign in</button>
+        </div>
+      </form>
+      <hr/>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+</div>

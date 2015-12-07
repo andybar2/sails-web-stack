@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title><%= __('AppTitle') %></title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/vendor/angular-toastr/angular-toastr.css">
+    <link rel="stylesheet" href="/styles/vendor/bootswatch.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <%- body %>
+
+    <!--TEMPLATES-->
+    
+    <!--TEMPLATES END-->
+
+    <!--SCRIPTS-->
+    <script src="/vendor/jquery/jquery.js"></script>
+    <script src="/vendor/angular/angular.js"></script>
+    <script src="/vendor/angular-animate/angular-animate.js"></script>
+    <script src="/vendor/angular-route/angular-route.js"></script>
+    <script src="/vendor/angular-toastr/angular-toastr.tpls.js"></script>
+    <script src="/vendor/bootstrap/bootstrap.js"></script>
+    <script src="/vendor/lodash/lodash.js"></script>
+    <script src="/vendor/ngstorage/ngStorage.js"></script>
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/app/admin/adminModule.js"></script>
+    <script src="/js/app/admin/dashboard/dashboardController.js"></script>
+    <script src="/js/app/admin/footer/footerDirective.js"></script>
+    <script src="/js/app/admin/header/headerController.js"></script>
+    <script src="/js/app/admin/header/headerDirective.js"></script>
+    <script src="/js/app/admin/login/loginController.js"></script>
+    <script src="/js/app/admin/users/addUserController.js"></script>
+    <script src="/js/app/admin/users/listUsersController.js"></script>
+    <script src="/js/app/admin/users/usersService.js"></script>
+    <script src="/js/app/app.js"></script>
+    <script src="/js/app/common/commonModule.js"></script>
+    <script src="/js/app/common/directives/loadingDirective.js"></script>
+    <script src="/js/app/common/services/securityService.js"></script>
+    <script src="/js/app/common/services/tooltipService.js"></script>
+    <script src="/js/app/public/publicModule.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

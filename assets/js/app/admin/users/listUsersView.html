@@ -1,0 +1,49 @@
+<appheader/>
+
+<div class="container margin-top-60" ng-controller="listUsersController">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>Users</h2>
+    </div>
+    <div class="col-sm-8 text-right padding-right-0">
+      <form class="navbar-form margin-top-15" ng-submit="search()">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="User or Email" ng-model="keyword">
+        </div>
+        <button type="submit" class="btn btn-success">Search</button>
+        <a href="#/admin/user/add" class="btn btn-info">Add User</a>
+      </form>
+    </div>
+  </div>
+  <div class="row margin-top-5">
+    <div class="col-lg-12">
+      <hr class="margin-top-0"/>
+      <loading flag="loading" class="center-in-page"/>
+      <table class="table table-striped table-hover" ng-hide="loading">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Email</th>
+            <th>Created</th>
+            <th>Updated</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="user in users">
+            <td>{{user.username}}</td>
+            <td>{{user.email || '-'}}</td>
+            <td>{{user.createdAt | date: 'medium'}}</td>
+            <td>{{user.updatedAt | date: 'medium'}}</td>
+            <td class="text-right">
+              <i class="fa fa-pencil padding-lr-5 link" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit User"></i>
+              <i class="fa fa-trash padding-lr-5 link" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete User"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<appfooter/>
